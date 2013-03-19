@@ -4,7 +4,6 @@ class CORSHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def send_head(self):
 	path = self.path
 	print path
-	ospath = os.path.abspath('')
 	if 'setled' in path:
 		regex = re.compile("\/setled([0-9]+)")
 		m = regex.match(path)
@@ -200,10 +199,12 @@ class CORSHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 		return f
 if __name__ == "__main__":
     print "WiiSnap by Technoboy10"
+    import sys
     import re
     import os
     import SocketServer
     import cwiid
+    ospath = os.path.abspath('')
     print "Please connect a Wiimote by pressing 1 and 2 on your Wiimote."
     #try:
     wm = cwiid.Wiimote()
@@ -217,5 +218,11 @@ if __name__ == "__main__":
 
     print "serving at port", PORT
     print "Go ahead and launch Snap!."
-    httpd.serve_forever()
+    sys.stdout.write("""
+<a href="http://snap.berkeley.edu/snapsource/snap.html#open:https://raw.github.com/Technoboy10/wiisnap/master/WiiSnap.xml>start Snap!</a>
+""".format(location="/Applications/whatever.app", file="whatever"))
+    try:
+        httpd.serve_forever()
+    except:
+        print "Something went wrong with the server. Please try again in a few minutes."
 
