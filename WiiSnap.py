@@ -205,6 +205,8 @@ if __name__ == "__main__":
     import SocketServer
     import cwiid
     ospath = os.path.abspath('')
+    if not 'WiiSnap' in open('/.snapmodules').read():
+    	open('/.snapmodules', 'w').write('WiiSnap')
     print "Please connect a Wiimote by pressing 1 and 2 on your Wiimote."
     #try:
     wm = cwiid.Wiimote()
