@@ -28,33 +28,44 @@
         </ul>
       </header>
       <section>
-        <h1>WiiSnap v1.0</h1>
+        <h1>
+<a name="wiisnap-v20" class="anchor" href="#wiisnap-v20"><span class="octicon octicon-link"></span></a>WiiSnap v2.0</h1>
 
-<p>A block module and local server for Snap! to interface with a Nintendo Wiimote and Nunchuk</p>
+<p>A block module and local server for Snap! to interface with a Nintendo Wiimote</p>
+
+<h1>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h1>
 
 <ul>
-<li><strong>THIS MODULE IS LINUX ONLY</strong></li>
-</ul><h1>Requirements</h1>
+<li>Added support for Classic Controller/Rock Band controllers</li>
+<li>Updated to snapext framework</li>
+<li>Added cake</li>
+</ul><h1>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h1>
 
 <ul>
-<li>A Wiimote and/or Nunchuk</li>
+<li>A Wiimote</li>
 <li>Python 2.6+</li>
 <li>The <code>cwiid</code> module for Python.</li>
-</ul><h1>Getting Started</h1>
+<li>the <code>snapext</code> module (<code>pip install snapext</code>)</li>
+</ul><h1>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h1>
 
 <ul>
 <li>Load Snap! in your browser window.</li>
-<li>Import the WiiSnap.xml file.</li>
+<li>Import the wiisnap.xml file.</li>
 <li>In a command line, navigate to the directory where you are storing these files.</li>
-<li>Type <code>python WiiSnap.py</code>.</li>
+<li>Type <code>python wiisnap.py</code>.</li>
 <li>Follow the instructions onscreen.</li>
-<li>The program should say something like <code>serving on port 1280. Go ahead and launch Snap! in your browser window.</code>
+<li>The program should print something like <code>serving on port 1280. Go ahead and launch Snap! in your browser window.</code>
 </li>
 <li><strong>Enjoy!</strong></li>
-</ul><h1>Credits</h1>
+</ul><h1>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h1>
 
 <ul>
-<li>Based heavily upon the Python CORS server here: <a href="https://gist.github.com/2904124">https://gist.github.com/2904124</a>
+<li>Thanks to <a href="https://github.com/blob8108" class="user-mention">@blob8108</a> for developing the snapext framework</li>
+<li>Based upon the Python CORS server here: <a href="https://gist.github.com/2904124">https://gist.github.com/2904124</a>
 </li>
 <li>Thanks to the Snap! team for making this fairly easy to do</li>
 </ul>
